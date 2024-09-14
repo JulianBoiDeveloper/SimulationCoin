@@ -1,4 +1,4 @@
-import os 
+import os
 
 def display_menu():
     print("Welcome to Simumation coin")
@@ -27,24 +27,5 @@ def get_choices():
 def main_menu():
     display_menu()
     choice = get_choices()
-    
-    if choice == 1:
-        print("You selected option 1")
-    elif choice == 2:
-        print("You selected option 2")
-    elif choice == 3:
-        print("You selected option 3")
-    elif choice == 4:
-        print("You selected option 4")
-    elif choice == 5:
-        print("You selected option 5")
-    elif choice == 6:
-        print("You selected option 6")
-    elif choice == 7:
-        print("You selected option 7")
-    elif choice == 8:
-        print("You selected option 8")
-    elif choice == 9:
-        print("You selected option 9")
-    elif choice == 10:
-        print("Exiting the program")
+    return choice;
+

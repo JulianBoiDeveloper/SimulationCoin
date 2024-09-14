@@ -36,5 +36,3 @@ def sell_crypto():
     print("\nUpdated Wallet:")
     for crypto, amount in wallet.items():
         print(f"{crypto}: {amount:.4f}")
-
-sell_crypto()
