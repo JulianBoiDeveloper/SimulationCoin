@@ -1,7 +1,7 @@
+from controller.before_menu import main
 
-from view.main_menu import main_menu;
-from controller.menu import change_page;
+main()
+    
 
-choice = main_menu();
 
-change_page(choice);
+
