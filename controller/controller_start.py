@@ -30,7 +30,9 @@ def start ():
         "invalidchoice" : translate_file.get('invalidchoice').encode('latin1').decode('utf-8'),
         "invalidchoicebetween" : translate_file.get('invalidchoicebetween').encode('latin1').decode('utf-8'),
         "titlechoosecrypto" : translate_file.get('titlechoosecrypto').encode('latin1').decode('utf-8'),
-        "menureturn" : translate_file.get('menureturn').encode('latin1').decode('utf-8')
+        "errorchoose" : translate_file.get('errorchoose').encode('latin1').decode('utf-8'),
+        "menureturn" : translate_file.get('menureturn').encode('latin1').decode('utf-8'),
+        "exitprogram" : translate_file.get('exitprogram').encode('latin1').decode('utf-8')
     }
     choice = {}
     choice.update(choice_file)

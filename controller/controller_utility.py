@@ -29,7 +29,9 @@ def save_properties(properties,path = ""):
                 file.write(f"{key} = {value}\n") 
 
 
-def get_choices(min,max,translate):
+def get_choices(min,max,translate,money,page,choice_tab):
+    from view.view_start import view_started
+    from controller.controller_cryptochange import cryptochange
     choice = None
     while True:
         try:
@@ -38,8 +40,20 @@ def get_choices(min,max,translate):
                 return choice
             else:
                 print(translate["invalidchoice"])
+                if page == 1:
+                    view_started(translate,money,choice_tab)
+                elif page == 2:
+                    cryptochange(translate,money,choice_tab)
+                else:
+                    raise Exception("This page doen't exist.")
         except ValueError:
             print(translate["invalidchoicebetween"])
+            if page == 1:
+                view_started(translate,money,choice_tab)
+            elif page == 2:
+                cryptochange(translate,money,choice_tab)
+            else:
+                raise Exception("This page doen't exist.")
 
 def get_file_choice():
     # Configuration Choix

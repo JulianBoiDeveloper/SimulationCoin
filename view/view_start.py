@@ -1,3 +1,4 @@
+import sys
 from controller.controller_utility import get_choices
 
 def view_started(translate,money,choice):
@@ -17,11 +18,13 @@ def view_started(translate,money,choice):
 
 def form_start(translate,money,choice):
     from controller.controller_cryptochange import cryptochange
-    selected = get_choices(1,11,translate)
+    selected = get_choices(1,11,translate,money,1,choice)
     if selected == 1:
         cryptochange(translate,money,choice)
-    elif selected == 2:
-        return 2;
+    elif selected == 11:
+        print(translate["exitprogram"])
+        sys.exit()
     else:
-        view_started(translate)
+        print(translate["invalidchoice"])
+        view_started(translate,money,choice)
     

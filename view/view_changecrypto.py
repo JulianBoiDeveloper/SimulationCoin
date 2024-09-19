@@ -17,7 +17,7 @@ def view_changecrypto(translate,money,choice):
 
 def form_changecrypto(translate,max,money,choice):
     from controller.controller_cryptochange import cryptoselected
-    selected = get_choices(1,max,translate)
+    selected = get_choices(1,max,translate,money,2,choice)
     cryptoselected(selected,translate,money,choice,max)
 
 def reset_samecrypto(translate,money,choice):
