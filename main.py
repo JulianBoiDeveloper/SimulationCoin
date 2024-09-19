@@ -1,6 +1,6 @@
-from controller.before_menu import main
+from controller.controller_start import start
 
-main()
+start()
     
 
 
