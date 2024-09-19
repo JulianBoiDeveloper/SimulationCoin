@@ -35,6 +35,7 @@ def save_properties(properties,path = ""):
 def get_choices(min,max,translate,money,page,choice_tab):
     from view.view_start import view_started
     from controller.controller_cryptochange import cryptochange
+    from controller.controller_buycrypto import cryptobuy
     choice = None
     while True:
         try:
@@ -47,6 +48,8 @@ def get_choices(min,max,translate,money,page,choice_tab):
                     view_started(translate,money,choice_tab)
                 elif page == 2:
                     cryptochange(translate,money,choice_tab)
+                elif page == 3:
+                    cryptobuy(translate,money,choice_tab)
                 else:
                     raise Exception("This page doen't exist.")
         except ValueError:
@@ -55,6 +58,8 @@ def get_choices(min,max,translate,money,page,choice_tab):
                 view_started(translate,money,choice_tab)
             elif page == 2:
                 cryptochange(translate,money,choice_tab)
+            elif page == 3:
+                    cryptobuy(translate,money,choice_tab)
             else:
                 raise Exception("This page doen't exist.")
 
@@ -99,3 +104,34 @@ def epoch_to_time(epoch_time):
     # Formater le datetime
     formatted_date = local_time.strftime('%A %d %B - %H:%M:%S')
     return str(formatted_date).capitalize()
+
+def get_money_input():
+    from view.view_start import view_started
+    from controller.controller_cryptochange import cryptochange
+    from controller.controller_buycrypto import cryptobuy
+    choice = None
+    while True:
+        try:
+            choice = int(input(translate["enterchoice"]))   
+            if min <= choice <= max:
+                return choice
+            else:
+                print(translate["invalidchoice"])
+                if page == 1:
+                    view_started(translate,money,choice_tab)
+                elif page == 2:
+                    cryptochange(translate,money,choice_tab)
+                elif page == 3:
+                    cryptobuy(translate,money,choice_tab)
+                else:
+                    raise Exception("This page doen't exist.")
+        except ValueError:
+            print(translate["invalidchoicebetween"])
+            if page == 1:
+                view_started(translate,money,choice_tab)
+            elif page == 2:
+                cryptochange(translate,money,choice_tab)
+            elif page == 3:
+                    cryptobuy(translate,money,choice_tab)
+            else:
+                raise Exception("This page doen't exist.")

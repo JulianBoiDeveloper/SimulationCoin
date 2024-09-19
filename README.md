@@ -134,3 +134,7 @@ A venir ...
 ## Lancement de l'application
 
 La commande pour lancer l'application est `py main.py` à la racine.
+
+## Aperçu de l'application
+
+![1726787221225](image/README/1726787221225.png)

@@ -24,9 +24,6 @@ def start ():
         "menu6" : translate_file.get('menu6').encode('latin1').decode('utf-8'),
         "menu7" : translate_file.get('menu7').encode('latin1').decode('utf-8'),
         "menu8" : translate_file.get('menu8').encode('latin1').decode('utf-8'),
-        "menu9" : translate_file.get('menu9').encode('latin1').decode('utf-8'),
-        "menu10" : translate_file.get('menu10').encode('latin1').decode('utf-8'),
-        "menu11" : translate_file.get('menu11').encode('latin1').decode('utf-8'),
         "enterchoice" : translate_file.get('enterchoice').encode('latin1').decode('utf-8'),
         "invalidchoice" : translate_file.get('invalidchoice').encode('latin1').decode('utf-8'),
         "invalidchoicebetween" : translate_file.get('invalidchoicebetween').encode('latin1').decode('utf-8'),
@@ -34,7 +31,13 @@ def start ():
         "errorchoose" : translate_file.get('errorchoose').encode('latin1').decode('utf-8'),
         "menureturn" : translate_file.get('menureturn').encode('latin1').decode('utf-8'),
         "exitprogram" : translate_file.get('exitprogram').encode('latin1').decode('utf-8'),
-        "buytitle" : translate_file.get('buytitle').encode('latin1').decode('utf-8')
+        "buytitle" : translate_file.get('buytitle').encode('latin1').decode('utf-8'),
+        "cryptomenuoption" : translate_file.get('cryptomenuoption').encode('latin1').decode('utf-8'),
+        "cryptomenuoptionamount1" : translate_file.get('cryptomenuoptionamount1').encode('latin1').decode('utf-8'),
+        "cryptomenuoptionamount2" : translate_file.get('cryptomenuoptionamount2').encode('latin1').decode('utf-8'),
+        "to" : translate_file.get('to').encode('latin1').decode('utf-8'),
+        "chooseamountcryptobuy" : translate_file.get('chooseamountcryptobuy').encode('latin1').decode('utf-8'),
+        "titlechoosecrypto" : translate_file.get('titlechoosecrypto').encode('latin1').decode('utf-8')
     }
     choice = {}
     choice.update(choice_file)
