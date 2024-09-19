@@ -4,3 +4,4 @@ data.properties
 .vscode/
 .venv/
 .venv/*
+*/__pycache__/*
