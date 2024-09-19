@@ -6,6 +6,7 @@ from view.view_start import view_started
 
 
 def start ():
+
     choice_file = get_file_choice()
     translate_file = get_file_lang(choice_file)
     money_file = get_file_wallet()
