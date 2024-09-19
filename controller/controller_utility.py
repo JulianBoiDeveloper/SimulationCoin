@@ -1,5 +1,8 @@
 import sys
 import os
+import datetime
+from zoneinfo import ZoneInfo
+import locale
 
 def read_properties(file_path):
     properties = {}
@@ -87,3 +90,12 @@ def get_file_wallet():
         print("[CRITICAL] The configuration properties file does not have the required language. Please make sure to change that.")
         sys.exit()
 
+def epoch_to_time(epoch_time):
+    choice_file = get_file_choice()
+    locale.setlocale(locale.LC_TIME, str(choice_file["locale"])+'.UTF-8')
+    dt_utc = datetime.datetime.fromtimestamp(epoch_time, tz=datetime.timezone.utc)
+    # Convertir le datetime UTC au fuseau horaire local avec zoneinfo
+    local_time = dt_utc.astimezone(ZoneInfo(str(choice_file["timezone"])))
+    # Formater le datetime
+    formatted_date = local_time.strftime('%A %d %B - %H:%M:%S')
+    return str(formatted_date).capitalize()

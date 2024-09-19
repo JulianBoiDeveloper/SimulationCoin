@@ -30,7 +30,7 @@ def form_start(translate,money,choice):
     if selected == 1:
         cryptochange(translate,money,choice)
     elif selected == 2:
-        cryptobuy(translate,money,choice,cartes)
+        cryptobuy(translate,money,choice)
     elif selected == 11:
         print(translate["exitprogram"])
         sys.exit()

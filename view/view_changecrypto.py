@@ -8,10 +8,10 @@ def view_changecrypto(translate,money,choice):
     cursor_final = len(money)+1
     for index, (key, value) in enumerate(money.items(), start=1):
         count = count +1
-        if str(count) == str(choice["activate_money"]):
-            print(str(index) + ". " + "(*)" +   key+" : "+value)
+        if str(count) == str(choice["activate_money"]): 
+            print("--------------"+str(index) +"-----------" + "(*)" +   key+" : "+value)
         else:
-            print(str(index) + ". " +"( )" +  key+" : "+value)
+            print("--------------"+str(index) +"-----------" +"( )" +  key+" : "+value)
     print(str(cursor_final)+". "+translate["menureturn"])
     form_changecrypto(translate,cursor_final,money,choice)
 
